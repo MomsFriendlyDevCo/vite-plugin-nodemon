@@ -1,0 +1,50 @@
+{
+  "name": "vite-plugin-nodemon",
+  "version": "1.0.0",
+  "description": "Run a backend server in a Vite project via Nodemon",
+  "keywords": [
+    "vite",
+    "vite-plugin",
+    "nodemon"
+  ],
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "type": "module",
+  "exports": {
+    ".": "./lib/vite-plugin-nodemon.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MomsFriendlyDevCo/vite-plugin-nodemon.git"
+  },
+  "author": "Matt Carter <matt@mfdc.biz>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MomsFriendlyDevCo/vite-plugin-nodemon/issues"
+  },
+  "homepage": "https://github.com/MomsFriendlyDevCo/vite-plugin-nodemon#readme",
+  "engineStrict": true,
+  "engines": {
+    "node": ">=18.x"
+  },
+  "dependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "devDependencies": {
+    "@momsfriendlydevco/eslint-config": "^1.0.7",
+    "eslint": "^8.49.0"
+  },
+  "eslintConfig": {
+    "extends": "momsfriendlydevco",
+    "env": {
+      "es6": true,
+      "node": true,
+      "mocha": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 13,
+      "sourceType": "module"
+    }
+  }
+}
