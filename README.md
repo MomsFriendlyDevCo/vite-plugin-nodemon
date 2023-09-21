@@ -12,29 +12,29 @@ In `vite.config.js`:
 import {defineConfig} from 'vite';
 
 export default defineConfig({
-    plugins: [
-		pluginNodemon({
-			script: './server.js',
-			watch: [
-				'.env',
-				'package.json',
-				'server.js',
-				'src/' + '**' + '/*.js', // Watch all JS files (we split the string up like this because those charcaters together can sometimes upset linters)
-			],
-			ignore: [
-				'src/main.js', // Ignore the Vite main file
-			],
-            envInject: { // Inject these environment variables into both Vite + the process
-            },
-			envInjectVite: { // Inject these environment variables into Vite
-				VITE_API_URL_BASE: 'http://localhost:8080',
-			},
-			envInjectProcess: { // Inject these environment variables into the process
-				SERVER_HOST: 'localhost',
-				SERVER_PORT: 8080,
-			},
-		}),
-    ],
+  plugins: [
+    pluginNodemon({
+      script: './server.js',
+      watch: [
+        '.env',
+        'package.json',
+        'server.js',
+        'src/' + '**' + '/*.js', // Watch all JS files (we split the string up like this because those charcaters together can sometimes upset linters)
+      ],
+      ignore: [
+        'src/main.js', // Ignore the Vite main file
+      ],
+      envInject: { // Inject these environment variables into both Vite + the process
+      },
+      envInjectVite: { // Inject these environment variables into Vite
+        VITE_API_URL_BASE: 'http://localhost:8080',
+      },
+      envInjectProcess: { // Inject these environment variables into the process
+        SERVER_HOST: 'localhost',
+        SERVER_PORT: 8080,
+      },
+    }),
+  ],
 });
 ```
 
